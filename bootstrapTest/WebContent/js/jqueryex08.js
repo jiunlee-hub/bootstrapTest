@@ -18,11 +18,11 @@ $(function(){
 		e.preventDefault();
 			if(!moving) {
 			moving = true;
-			$(".gallery li:first").clone().prependTo(".gallery");
+			$(".gallery li:last").clone().prependTo(".gallery");
 			$(".gallery").stop().animate({left: "-=90px"},0);
 			$(".gallery").stop().animate({left: "+=90px"},400, function(){
 					moving = false;
-				$(".gallery li:first").remove();
+				$(".gallery li:last").remove();
 			});
 		}
 	});
